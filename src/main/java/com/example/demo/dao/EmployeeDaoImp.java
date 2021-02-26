@@ -37,7 +37,6 @@ public class EmployeeDaoImp extends JdbcDaoSupport implements EmployeeDao{
 
     @Override
     public void update(int id, int salary) {
-        this.eventPublisher.publishEvent(new SalaryChangeEvent());
     }
 
     @Override
