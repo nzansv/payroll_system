@@ -9,9 +9,10 @@ public class SalaryChangeEvent extends ApplicationEvent {
 
     public SalaryChangeEvent(Object source, Employee employee) {
         super(source);
+        this.employee=employee;
     }
 
-    public Employee getUser() {
+    public Employee getEmployee() {
         return employee;
     }
 }

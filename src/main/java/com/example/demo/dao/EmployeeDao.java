@@ -11,7 +11,9 @@ public interface EmployeeDao {
 
     void delete(int id);
 
-    void update(int id, int salary);
+    void update(int id, int updSalary);
 
     List<Employee> getList();
+
+    Employee getEmployee(int id);
 }

@@ -6,6 +6,6 @@ public class SalaryChangeEventHandler implements ApplicationListener<SalaryChang
 
     @Override
     public void onApplicationEvent(SalaryChangeEvent salaryChangeEvent) {
-        System.out.println("SalaryChangeEvent.onApplicationEvent");
+        System.out.println("SalaryChangeEvent.onApplicationEvent's result: " + salaryChangeEvent.getEmployee());
     }
 }
