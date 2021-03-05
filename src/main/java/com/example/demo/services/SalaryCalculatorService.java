@@ -35,7 +35,8 @@ public class SalaryCalculatorService {
                 System.out.println("Current Fixed Salary: " + employee.getFixedSalary() + " tg");
                 System.out.println("Increase to(%): ");
                 percentage = in.nextDouble();
-                System.out.println("Increased Fixed Salary: " + employee.getFixedSalary()*percentage/100+employee.getFixedSalary() + " tg");
+                double newSal = employee.getFixedSalary()*percentage/100+employee.getFixedSalary();
+                System.out.println("Increased Fixed Salary: " + newSal + " tg");
                 break;
             case HOURLY:
                 System.out.println("Only for employees with fixed salary!");
