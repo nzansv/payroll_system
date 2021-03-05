@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 import com.example.demo.entities.Employee;
+import com.example.demo.entities.EmployeeType;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -12,10 +13,10 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
 
         Employee employee = new Employee();
 
-        employee.setId(resultSet.getInt("id"));
+        employee.setId( resultSet.getLong("id"));
         employee.setName(resultSet.getString("name"));
-        employee.setSalary(resultSet.getInt("salary"));
-        employee.setType(resultSet.getString("type"));
+        employee.setFixedSalary(resultSet.getInt("salary"));
+        employee.setEmplType(EmployeeType.valueOf(resultSet.getString("type")));
 
         return employee;
     }

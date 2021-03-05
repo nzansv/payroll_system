@@ -59,12 +59,12 @@ public class SalaryCalculatorService {
         System.out.println("ID:");
         int id = in.nextInt();
         Employee employee = employeeDaoImp.getEmployee(id);
-        int currentSalary = employee.getSalary();
+        double currentSalary = employee.getFixedSalary();
 
         System.out.println("****************");
         System.out.println(employee.getId());
         System.out.println(employee.getName());
-        System.out.println(employee.getSalary());
+        System.out.println(employee.getFixedSalary());
         System.out.println("**************** ");
         System.out.println("1. Increase");
         System.out.println("2. Decrease");
@@ -73,12 +73,12 @@ public class SalaryCalculatorService {
             case 1:
                 System.out.print("Percentage: ");
                 int percentage = in.nextInt();
-                employeeDaoImp.update(id, currentSalary + currentSalary * percentage / 100);
+                employeeDaoImp.update(id, (int) (currentSalary + currentSalary * percentage / 100));
                 break;
             case 2:
                 System.out.print("Percentage: ");
                 int per = in.nextInt();
-                employeeDaoImp.update(id, currentSalary - currentSalary * per / 100);
+                employeeDaoImp.update(id, (int) (currentSalary - currentSalary * per / 100));
                 break;
         }
     }
