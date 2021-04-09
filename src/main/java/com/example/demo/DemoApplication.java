@@ -1,9 +1,5 @@
 package com.example.demo;
 import com.example.demo.controller.EmployeeController;
-import com.example.demo.dao.EmployeeDao;
-import com.example.demo.dao.EmployeeDaoImp;
-import com.example.demo.entities.EmployeeType;
-import com.example.demo.services.SalaryCalculatorService;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

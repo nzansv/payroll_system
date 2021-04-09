@@ -13,6 +13,7 @@ public class Employee {
     private double hourRate;
     private int hoursWorked;
     private float commRate;
+    //adssssssssssssssssssssssssssssssssssssssss
 
     @Enumerated(EnumType.STRING)
     private EmployeeType emplType;
